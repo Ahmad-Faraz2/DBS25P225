@@ -33,6 +33,24 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
+      <HintPath>packages\BouncyCastle.Cryptography.2.3.1\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf, Version=3.26.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>packages\Google.Protobuf.3.26.1\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4, Version=1.3.8.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>packages\K4os.Compression.LZ4.1.3.8\lib\net462\K4os.Compression.LZ4.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4.Streams, Version=1.3.8.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>packages\K4os.Compression.LZ4.Streams.1.3.8\lib\net462\K4os.Compression.LZ4.Streams.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Hash.xxHash, Version=1.0.8.0, Culture=neutral, PublicKeyToken=32cd54395057cec3, processorArchitecture=MSIL">
+      <HintPath>packages\K4os.Hash.xxHash.1.0.8\lib\net462\K4os.Hash.xxHash.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Bcl.AsyncInterfaces.5.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
     </Reference>
@@ -51,8 +69,39 @@
     <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
     </Reference>
+    <Reference Include="MySql.Data, Version=9.2.0.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>packages\MySql.Data.9.2.0\lib\net462\MySql.Data.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.ConfigurationManager, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Configuration.ConfigurationManager.8.0.0\lib\net462\System.Configuration.ConfigurationManager.dll</HintPath>
+    </Reference>
     <Reference Include="System.Core" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=8.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Diagnostics.DiagnosticSource.8.0.1\lib\net462\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Pipelines, Version=5.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.IO.Pipelines.5.0.2\lib\net461\System.IO.Pipelines.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -62,116 +111,146 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="ZstdSharp, Version=0.8.0.0, Culture=neutral, PublicKeyToken=8d151af33a4ad5cf, processorArchitecture=MSIL">
+      <HintPath>packages\ZstdSharp.Port.0.8.0\lib\net462\ZstdSharp.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ForgetPassword.cs">
+    <Compile Include="UserDataAccess.cs" />
+    <Compile Include="UserService.cs" />
+    <Compile Include="DatabaseHelper.cs" />
+    <Compile Include="ForgetPasswordForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ForgetPassword.Designer.cs">
-      <DependentUpon>ForgetPassword.cs</DependentUpon>
+    <Compile Include="ForgetPasswordForm.Designer.cs">
+      <DependentUpon>ForgetPasswordForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="DeptHeadDashboard.cs">
+    <Compile Include="DeptHeadDashboardForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include=".Designer.cs">
-      <DependentUpon>DeptHeadDashboard.cs</DependentUpon>
+      <DependentUpon>DeptHeadDashboardForm.cs</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FacultyDashboard.cs">
+    <Compile Include="FacultyDashboardForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FacultyDashboard.Designer.cs">
-      <DependentUpon>FacultyDashboard.cs</DependentUpon>
+    <Compile Include="FacultyDashboardForm.Designer.cs">
+      <DependentUpon>FacultyDashboardForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AssignWorkload.cs">
+    <Compile Include="AssignWorkloadForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AssignWorkload.Designer.cs">
-      <DependentUpon>AssignWorkload.cs</DependentUpon>
+    <Compile Include="AssignWorkloadForm.Designer.cs">
+      <DependentUpon>AssignWorkloadForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ApproveRequests.cs">
+    <Compile Include="ApproveRequestsForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ApproveRequests.Designer.cs">
-      <DependentUpon>ApproveRequests.cs</DependentUpon>
+    <Compile Include="ApproveRequestsForm.Designer.cs">
+      <DependentUpon>ApproveRequestsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AllocateResources.cs">
+    <Compile Include="AllocateResourcesForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AllocateResources.Designer.cs">
-      <DependentUpon>AllocateResources.cs</DependentUpon>
+    <Compile Include="AllocateResourcesForm.Designer.cs">
+      <DependentUpon>AllocateResourcesForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="EditProfile.cs">
+    <Compile Include="EditProfileForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EditProfile.Designer.cs">
-      <DependentUpon>EditProfile.cs</DependentUpon>
+    <Compile Include="EditProfileForm.Designer.cs">
+      <DependentUpon>EditProfileForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="InventoryManagement.cs">
+    <Compile Include="AdminDashboardForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="InventoryManagement.Designer.cs">
-      <DependentUpon>InventoryManagement.cs</DependentUpon>
+    <Compile Include="AdminDashboardForm.Designer.cs">
+      <DependentUpon>AdminDashboardForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="GenerateReports.cs">
+    <Compile Include="RequestResourcesForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GenerateReports.Designer.cs">
-      <DependentUpon>GenerateReports.cs</DependentUpon>
+    <Compile Include="RequestResourcesForm.Designer.cs">
+      <DependentUpon>RequestResourcesForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="RequestResource.cs">
+    <Compile Include="InventoryManagementForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RequestResource.Designer.cs">
-      <DependentUpon>RequestResource.cs</DependentUpon>
+    <Compile Include="InventoryManagementForm.Designer.cs">
+      <DependentUpon>InventoryManagementForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ManageFaculty.cs">
+    <Compile Include="GenerateReportsForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ManageFaculty.Designer.cs">
-      <DependentUpon>ManageFaculty.cs</DependentUpon>
+    <Compile Include="GenerateReportsForm.Designer.cs">
+      <DependentUpon>GenerateReportsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ResetPassword.cs">
+    <Compile Include="Properties\ResetPasswordForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ResetPassword.Designer.cs">
-      <DependentUpon>ResetPassword.cs</DependentUpon>
+    <Compile Include="Properties\ResetPasswordForm.Designer.cs">
+      <DependentUpon>ResetPasswordForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdminDashboard.cs">
+    <Compile Include="ManageFacultyForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminDashboard.Designer.cs">
-      <DependentUpon>AdminDashboard.cs</DependentUpon>
+    <Compile Include="ManageFacultyForm.Designer.cs">
+      <DependentUpon>ManageFacultyForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Login.cs">
+    <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login.Designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Signup.cs">
+    <Compile Include="SignupForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Signup.Designer.cs">
-      <DependentUpon>Signup.cs</DependentUpon>
+    <Compile Include="SignupForm.Designer.cs">
+      <DependentUpon>SignupForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
-    <EmbeddedResource Include="ForgetPassword.resx">
-      <DependentUpon>ForgetPassword.cs</DependentUpon>
+    <EmbeddedResource Include="AdminDashboardForm.resx">
+      <DependentUpon>AdminDashboardForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AdminDashboard.resx">
-      <DependentUpon>AdminDashboard.cs</DependentUpon>
+    <EmbeddedResource Include="AllocateResourcesForm.resx">
+      <DependentUpon>AllocateResourcesForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login.resx">
-      <DependentUpon>Login.cs</DependentUpon>
+    <EmbeddedResource Include="ApproveRequestsForm.resx">
+      <DependentUpon>ApproveRequestsForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ResetPassword.resx">
-      <DependentUpon>ResetPassword.cs</DependentUpon>
+    <EmbeddedResource Include="AssignWorkloadForm.resx">
+      <DependentUpon>AssignWorkloadForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Signup.resx">
-      <DependentUpon>Signup.cs</DependentUpon>
+    <EmbeddedResource Include="DeptHeadDashboardForm.resx">
+      <DependentUpon>DeptHeadDashboardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ForgetPasswordForm.resx">
+      <DependentUpon>ForgetPasswordForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GenerateReportsForm.resx">
+      <DependentUpon>GenerateReportsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InventoryManagementForm.resx">
+      <DependentUpon>InventoryManagementForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageFacultyForm.resx">
+      <DependentUpon>ManageFacultyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\ResetPasswordForm.resx">
+      <DependentUpon>ResetPasswordForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RequestResourcesForm.resx">
+      <DependentUpon>RequestResourcesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignupForm.resx">
+      <DependentUpon>SignupForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
