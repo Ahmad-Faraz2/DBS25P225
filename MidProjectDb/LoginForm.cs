@@ -58,16 +58,33 @@ namespace MidProjectDb
                 return;
             }
 
-            // Call the service layer to authenticate the user.
-            bool isAuthenticated = userService.AuthenticateUser(username, password);
+            User loggedInUser = userService.AuthenticateUserAndGetUser(username, password);
 
-            if (isAuthenticated)
+            if (loggedInUser != null)
             {
                 MessageBox.Show("Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                // For role-based redirection, retrieve and check user role from the service.
-                // Here we assume a DashboardForm exists for successful login.
-                DashboardForm dashboard = new DashboardForm();
-                dashboard.Show();
+
+                if (loggedInUser.RoleId == 1)  // Admin
+                {
+                    AdminDashboardForm adminDashboard = new AdminDashboardForm();
+                    adminDashboard.Show();
+                }
+                else if (loggedInUser.RoleId == 2)  // Faculty
+                {
+                    FacultyDashboardForm facultyDashboard = new FacultyDashboardForm();
+                    facultyDashboard.Show();
+                }
+                else if (loggedInUser.RoleId == 3)  // Department Head
+                {
+
+                    HeadDashboardForm deptDashboard = new HeadDashboardForm();
+                    deptDashboard.Show();
+                }
+                else
+                {
+                    MessageBox.Show("User role not recognized.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
                 this.Hide();
             }
             else

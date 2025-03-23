@@ -33,13 +33,11 @@
             this.Panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.dgvFaculty = new System.Windows.Forms.DataGridView();
+            this.btnProcessrequests = new System.Windows.Forms.Button();
+            this.btnAllocateCourses = new System.Windows.Forms.Button();
+            this.btnUpdateInventory = new System.Windows.Forms.Button();
             this.Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvFaculty)).BeginInit();
             this.SuspendLayout();
             // 
             // btnManageFaculty
@@ -91,52 +89,47 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Admin Dashboard";
             // 
-            // button1
+            // btnProcessrequests
             // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button1.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button1.Location = new System.Drawing.Point(274, 226);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(146, 45);
-            this.button1.TabIndex = 55;
-            this.button1.Text = "Process Requests";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnProcessrequests.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnProcessrequests.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnProcessrequests.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProcessrequests.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnProcessrequests.Location = new System.Drawing.Point(274, 226);
+            this.btnProcessrequests.Name = "btnProcessrequests";
+            this.btnProcessrequests.Size = new System.Drawing.Size(122, 45);
+            this.btnProcessrequests.TabIndex = 55;
+            this.btnProcessrequests.Text = "Process Requests";
+            this.btnProcessrequests.UseVisualStyleBackColor = false;
+            this.btnProcessrequests.Click += new System.EventHandler(this.btnProcessrequests_Click);
             // 
-            // button2
+            // btnAllocateCourses
             // 
-            this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button2.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button2.Location = new System.Drawing.Point(274, 174);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(122, 30);
-            this.button2.TabIndex = 56;
-            this.button2.Text = "Allocate Courses";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnAllocateCourses.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnAllocateCourses.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnAllocateCourses.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAllocateCourses.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnAllocateCourses.Location = new System.Drawing.Point(274, 174);
+            this.btnAllocateCourses.Name = "btnAllocateCourses";
+            this.btnAllocateCourses.Size = new System.Drawing.Size(122, 30);
+            this.btnAllocateCourses.TabIndex = 56;
+            this.btnAllocateCourses.Text = "Allocate Courses";
+            this.btnAllocateCourses.UseVisualStyleBackColor = false;
+            this.btnAllocateCourses.Click += new System.EventHandler(this.btnAllocateCourses_Click);
             // 
-            // button3
+            // btnUpdateInventory
             // 
-            this.button3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button3.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button3.Location = new System.Drawing.Point(274, 277);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(122, 30);
-            this.button3.TabIndex = 57;
-            this.button3.Text = "Update Inventory";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // dgvFaculty
-            // 
-            this.dgvFaculty.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvFaculty.Location = new System.Drawing.Point(492, 288);
-            this.dgvFaculty.Name = "dgvFaculty";
-            this.dgvFaculty.Size = new System.Drawing.Size(240, 150);
-            this.dgvFaculty.TabIndex = 58;
+            this.btnUpdateInventory.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnUpdateInventory.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnUpdateInventory.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdateInventory.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnUpdateInventory.Location = new System.Drawing.Point(274, 277);
+            this.btnUpdateInventory.Name = "btnUpdateInventory";
+            this.btnUpdateInventory.Size = new System.Drawing.Size(122, 30);
+            this.btnUpdateInventory.TabIndex = 57;
+            this.btnUpdateInventory.Text = "Update Inventory";
+            this.btnUpdateInventory.UseVisualStyleBackColor = false;
+            this.btnUpdateInventory.Click += new System.EventHandler(this.btnUpdateInventory_Click);
             // 
             // AdminDashboardForm
             // 
@@ -144,10 +137,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dgvFaculty);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnUpdateInventory);
+            this.Controls.Add(this.btnAllocateCourses);
+            this.Controls.Add(this.btnProcessrequests);
             this.Controls.Add(this.btnManageFaculty);
             this.Controls.Add(this.Panel1);
             this.Name = "AdminDashboardForm";
@@ -156,7 +148,6 @@
             this.Panel1.ResumeLayout(false);
             this.Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvFaculty)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -166,9 +157,8 @@
         private System.Windows.Forms.Panel Panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.DataGridView dgvFaculty;
+        private System.Windows.Forms.Button btnProcessrequests;
+        private System.Windows.Forms.Button btnAllocateCourses;
+        private System.Windows.Forms.Button btnUpdateInventory;
     }
 }

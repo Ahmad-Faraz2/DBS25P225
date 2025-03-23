@@ -31,8 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CourseAssignmentForm));
             this.dgvAssignments = new System.Windows.Forms.DataGridView();
             this.Panel1 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.cmbFaculty = new System.Windows.Forms.ComboBox();
             this.cmbCourse = new System.Windows.Forms.ComboBox();
             this.cmbSemester = new System.Windows.Forms.ComboBox();
@@ -52,6 +52,7 @@
             this.dgvAssignments.Name = "dgvAssignments";
             this.dgvAssignments.Size = new System.Drawing.Size(240, 150);
             this.dgvAssignments.TabIndex = 4;
+            this.dgvAssignments.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAssignments_CellContentClick);
             // 
             // Panel1
             // 
@@ -64,6 +65,17 @@
             this.Panel1.Name = "Panel1";
             this.Panel1.Size = new System.Drawing.Size(800, 75);
             this.Panel1.TabIndex = 3;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(119, 68);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
             // 
             // label3
             // 
@@ -78,17 +90,6 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Course Assignment";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(119, 68);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            // 
             // cmbFaculty
             // 
             this.cmbFaculty.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -98,6 +99,7 @@
             this.cmbFaculty.Size = new System.Drawing.Size(121, 21);
             this.cmbFaculty.TabIndex = 5;
             this.cmbFaculty.Text = "Faculty";
+            this.cmbFaculty.SelectedIndexChanged += new System.EventHandler(this.cmbFaculty_SelectedIndexChanged);
             // 
             // cmbCourse
             // 
@@ -108,6 +110,7 @@
             this.cmbCourse.Size = new System.Drawing.Size(121, 21);
             this.cmbCourse.TabIndex = 6;
             this.cmbCourse.Text = "Course";
+            this.cmbCourse.SelectedIndexChanged += new System.EventHandler(this.cmbCourse_SelectedIndexChanged);
             // 
             // cmbSemester
             // 
@@ -118,6 +121,7 @@
             this.cmbSemester.Size = new System.Drawing.Size(121, 21);
             this.cmbSemester.TabIndex = 7;
             this.cmbSemester.Text = "Semester";
+            this.cmbSemester.SelectedIndexChanged += new System.EventHandler(this.cmbSemester_SelectedIndexChanged);
             // 
             // btnAssign
             // 
@@ -130,6 +134,7 @@
             this.btnAssign.TabIndex = 8;
             this.btnAssign.Text = "Assign";
             this.btnAssign.UseVisualStyleBackColor = false;
+            this.btnAssign.Click += new System.EventHandler(this.btnAssign_Click);
             // 
             // btnUpdate
             // 
@@ -142,6 +147,7 @@
             this.btnUpdate.TabIndex = 9;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnClear
             // 
@@ -154,6 +160,7 @@
             this.btnClear.TabIndex = 10;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // CourseAssignmentForm
             // 

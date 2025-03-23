@@ -14,8 +14,16 @@ namespace MidProjectDb
 
         public bool AuthenticateUser(string username, string password)
         {
-            // Here you could add additional business logic if necessary
             return userDataAccess.ValidateUser(username, password);
+        }
+        public User AuthenticateUserAndGetUser(string username, string password)
+        {
+            return userDataAccess.GetUserByCredentials(username, password);
+        }
+
+        public bool RegisterUser(User user)
+        {
+            return userDataAccess.InsertUser(user);
         }
     }
 }

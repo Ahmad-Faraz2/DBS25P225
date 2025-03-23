@@ -116,6 +116,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CourseService.cs" />
+    <Compile Include="CourseDataAccess.cs" />
     <Compile Include="CourseAssignmentService.cs" />
     <Compile Include="CourseAssignmentDataAccess.cs" />
     <Compile Include="FacultyCourseAssignment.cs" />
@@ -125,6 +127,13 @@
     <Compile Include="CourseAssignmentForm.Designer.cs">
       <DependentUpon>CourseAssignmentForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="HeadDashboardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HeadDashboardForm.Designer.cs">
+      <DependentUpon>HeadDashboardForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Role.cs" />
     <Compile Include="Semester.cs" />
     <Compile Include="Course.cs" />
     <Compile Include="FacultyService.cs" />
@@ -142,6 +151,9 @@
     <Compile Include="RoleSelectionForm.Designer.cs">
       <DependentUpon>RoleSelectionForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="SemesterDataAccess.cs" />
+    <Compile Include="SemesterService.cs" />
+    <Compile Include="User.cs" />
     <Compile Include="UserDataAccess.cs" />
     <Compile Include="UserService.cs" />
     <Compile Include="DatabaseHelper.cs" />
@@ -150,13 +162,6 @@
     </Compile>
     <Compile Include="ForgotPasswordForm.Designer.cs">
       <DependentUpon>ForgotPasswordForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="DeptHeadDashboardForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include=".Designer.cs">
-      <DependentUpon>DeptHeadDashboardForm.cs</DependentUpon>
-      <SubType>Form</SubType>
     </Compile>
     <Compile Include="FacultyDashboardForm.cs">
       <SubType>Form</SubType>
@@ -170,11 +175,11 @@
     <Compile Include="AssignWorkloadForm.Designer.cs">
       <DependentUpon>AssignWorkloadForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ApproveRequestsForm.cs">
+    <Compile Include="ResourceApprovalForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ApproveRequestsForm.Designer.cs">
-      <DependentUpon>ApproveRequestsForm.cs</DependentUpon>
+    <Compile Include="ResourceApprovalForm.Designer.cs">
+      <DependentUpon>ResourceApprovalForm.cs</DependentUpon>
     </Compile>
     <Compile Include="AllocateResourcesForm.cs">
       <SubType>Form</SubType>
@@ -200,11 +205,11 @@
     <Compile Include="RequestResourcesForm.Designer.cs">
       <DependentUpon>RequestResourcesForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="InventoryManagementForm.cs">
+    <Compile Include="ConsumablesInventoryForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="InventoryManagementForm.Designer.cs">
-      <DependentUpon>InventoryManagementForm.cs</DependentUpon>
+    <Compile Include="ConsumablesInventoryForm.Designer.cs">
+      <DependentUpon>ConsumablesInventoryForm.cs</DependentUpon>
     </Compile>
     <Compile Include="GenerateReportsForm.cs">
       <SubType>Form</SubType>
@@ -245,17 +250,20 @@
     <EmbeddedResource Include="AllocateResourcesForm.resx">
       <DependentUpon>AllocateResourcesForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ApproveRequestsForm.resx">
-      <DependentUpon>ApproveRequestsForm.cs</DependentUpon>
+    <EmbeddedResource Include="FacultyDashboardForm.resx">
+      <DependentUpon>FacultyDashboardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HeadDashboardForm.resx">
+      <DependentUpon>HeadDashboardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResourceApprovalForm.resx">
+      <DependentUpon>ResourceApprovalForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AssignWorkloadForm.resx">
       <DependentUpon>AssignWorkloadForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CourseAssignmentForm.resx">
       <DependentUpon>CourseAssignmentForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DeptHeadDashboardForm.resx">
-      <DependentUpon>DeptHeadDashboardForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FacultyListForm.resx">
       <DependentUpon>FacultyListForm.cs</DependentUpon>
@@ -269,8 +277,8 @@
     <EmbeddedResource Include="GenerateReportsForm.resx">
       <DependentUpon>GenerateReportsForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="InventoryManagementForm.resx">
-      <DependentUpon>InventoryManagementForm.cs</DependentUpon>
+    <EmbeddedResource Include="ConsumablesInventoryForm.resx">
+      <DependentUpon>ConsumablesInventoryForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>

@@ -24,8 +24,29 @@ namespace MidProjectDb
 
         private void btnManageFaculty_Click(object sender, EventArgs e)
         {
+            this.Hide();
             ManageFaculty manageFacultyForm = new ManageFaculty();
             manageFacultyForm.Show();
+            
         }
+
+        private void btnAllocateCourses_Click(object sender, EventArgs e)
+        {
+            CourseAssignmentForm courseAssignmentForm = new CourseAssignmentForm();
+            courseAssignmentForm.Show();
+        }
+
+        private void btnProcessrequests_Click(object sender, EventArgs e)
+        {
+            ResourceApprovalForm resourceApprovalForm = new ResourceApprovalForm();
+            resourceApprovalForm.Show();
+        }
+
+        private void btnUpdateInventory_Click(object sender, EventArgs e)
+        {
+            ConsumablesInventoryForm inventoryForm = new ConsumablesInventoryForm();
+            inventoryForm.Show();
+        }
+
     }
 }

@@ -67,11 +67,11 @@ namespace MidProjectDb
             }
 
             // Redirect based on the selected role.
-            if (selectedRole == "Department Head")
-            {
-                DeptHeadDashboardForm dashboard = new DeptHeadDashboardForm();
-                dashboard.Show();
-            }
+            //if (selectedRole == "Department Head")
+            //{
+            //    DeptHeadDashboardForm dashboard = new DeptHeadDashboardForm();
+            //    dashboard.Show();
+            //}
             else if (selectedRole == "Faculty")
             {
                 FacultyDashboardForm dashboard = new FacultyDashboardForm();

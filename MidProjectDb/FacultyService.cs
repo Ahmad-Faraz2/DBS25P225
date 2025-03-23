@@ -29,5 +29,6 @@ namespace MidProjectDb
         {
             return facultyDataAccess.DeleteFaculty(facultyId);
         }
+       
     }
 }

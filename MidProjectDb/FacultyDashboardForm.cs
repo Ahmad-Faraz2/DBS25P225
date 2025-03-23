@@ -16,5 +16,19 @@ namespace MidProjectDb
         {
             InitializeComponent();
         }
+
+        private void btnFacultyProfile_Click(object sender, EventArgs e)
+        {
+            FacultyProfileForm profileForm = new FacultyProfileForm();
+            profileForm.Show();
+            this.Hide();
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            LoginForm login = new LoginForm();
+            login.Show();
+            this.Close();
+        }
     }
 }

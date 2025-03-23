@@ -36,8 +36,6 @@
             this.txtResearchInterests = new System.Windows.Forms.TextBox();
             this.txtTeachingHours = new System.Windows.Forms.TextBox();
             this.btnSave = new System.Windows.Forms.Button();
-            this.btnUpdate = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtContact = new System.Windows.Forms.TextBox();
@@ -137,37 +135,11 @@
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // btnUpdate
-            // 
-            this.btnUpdate.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnUpdate.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.btnUpdate.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnUpdate.Location = new System.Drawing.Point(426, 293);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(75, 23);
-            this.btnUpdate.TabIndex = 52;
-            this.btnUpdate.Text = "Update";
-            this.btnUpdate.UseVisualStyleBackColor = false;
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnDelete.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.btnDelete.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnDelete.Location = new System.Drawing.Point(314, 332);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(75, 23);
-            this.btnDelete.TabIndex = 53;
-            this.btnDelete.Text = "Delete";
-            this.btnDelete.UseVisualStyleBackColor = false;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
             // btnClear
             // 
             this.btnClear.BackColor = System.Drawing.SystemColors.HotTrack;
             this.btnClear.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnClear.Location = new System.Drawing.Point(426, 332);
+            this.btnClear.Location = new System.Drawing.Point(439, 293);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(75, 23);
             this.btnClear.TabIndex = 54;
@@ -223,8 +195,6 @@
             this.Controls.Add(this.txtContact);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.btnClear);
-            this.Controls.Add(this.btnDelete);
-            this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.txtTeachingHours);
             this.Controls.Add(this.txtResearchInterests);
@@ -252,8 +222,6 @@
         private System.Windows.Forms.TextBox txtResearchInterests;
         private System.Windows.Forms.TextBox txtTeachingHours;
         private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.Button btnUpdate;
-        private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.TextBox txtContact;
