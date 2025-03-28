@@ -13,7 +13,6 @@ D:\2nd Semester\DB(MID_PROJECT)\MidProjectDb\obj\Debug\MidProjectDb.LoginForm.re
 D:\2nd Semester\DB(MID_PROJECT)\MidProjectDb\obj\Debug\MidProjectDb.ManageFaculty.resources
 D:\2nd Semester\DB(MID_PROJECT)\MidProjectDb\obj\Debug\MidProjectDb.Properties.ResetPasswordForm.resources
 D:\2nd Semester\DB(MID_PROJECT)\MidProjectDb\obj\Debug\MidProjectDb.RequestResourcesForm.resources
-D:\2nd Semester\DB(MID_PROJECT)\MidProjectDb\obj\Debug\MidProjectDb.RoleSelectionForm.resources
 D:\2nd Semester\DB(MID_PROJECT)\MidProjectDb\obj\Debug\MidProjectDb.SignupForm.resources
 D:\2nd Semester\DB(MID_PROJECT)\MidProjectDb\obj\Debug\MidProjectDb.Properties.Resources.resources
 D:\2nd Semester\DB(MID_PROJECT)\MidProjectDb\obj\Debug\MidProjectDb.csproj.GenerateResource.cache
@@ -110,3 +109,6 @@ D:\2nd Semester\DB(MID_PROJECT)\MidProjectDb\obj\Debug\MidProjectDb.ResourceAppr
 D:\2nd Semester\DB(MID_PROJECT)\MidProjectDb\obj\Debug\MidProjectDb.ConsumablesInventoryForm.resources
 D:\2nd Semester\DB(MID_PROJECT)\MidProjectDb\obj\Debug\MidProjectDb.FacultyDashboardForm.resources
 D:\2nd Semester\DB(MID_PROJECT)\MidProjectDb\obj\Debug\MidProjectDb.HeadDashboardForm.resources
+D:\2nd Semester\DB(MID_PROJECT)\MidProjectDb\obj\Debug\MidProjectDb.AssignedCoursesForm.resources
+D:\2nd Semester\DB(MID_PROJECT)\MidProjectDb\obj\Debug\MidProjectDb.FacultyRequestForm.resources
+D:\2nd Semester\DB(MID_PROJECT)\MidProjectDb\obj\Debug\MidProjectDb.RequestStatusForm.resources

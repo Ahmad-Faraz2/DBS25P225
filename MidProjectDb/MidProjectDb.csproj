@@ -116,105 +116,123 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CourseService.cs" />
-    <Compile Include="CourseDataAccess.cs" />
-    <Compile Include="CourseAssignmentService.cs" />
-    <Compile Include="CourseAssignmentDataAccess.cs" />
-    <Compile Include="FacultyCourseAssignment.cs" />
-    <Compile Include="CourseAssignmentForm.cs">
+    <Compile Include="Forms\AssignedCoursesForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CourseAssignmentForm.Designer.cs">
+    <Compile Include="Forms\AssignedCoursesForm.Designer.cs">
+      <DependentUpon>AssignedCoursesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Consumable.cs" />
+    <Compile Include="Services\ConsumableService.cs" />
+    <Compile Include="Services\CourseService.cs" />
+    <Compile Include="DataAccess\CourseDataAccess.cs" />
+    <Compile Include="Services\CourseAssignmentService.cs" />
+    <Compile Include="DataAccess\CourseAssignmentDataAccess.cs" />
+    <Compile Include="Models\FacultyCourseAssignment.cs" />
+    <Compile Include="Forms\CourseAssignmentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CourseAssignmentForm.Designer.cs">
       <DependentUpon>CourseAssignmentForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="HeadDashboardForm.cs">
+    <Compile Include="Models\FacultyRequest.cs" />
+    <Compile Include="DataAccess\FacultyRequestDataAccess.cs" />
+    <Compile Include="Forms\FacultyRequestForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="HeadDashboardForm.Designer.cs">
+    <Compile Include="Forms\FacultyRequestForm.Designer.cs">
+      <DependentUpon>FacultyRequestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Services\FacultyRequestService.cs" />
+    <Compile Include="Forms\HeadDashboardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\HeadDashboardForm.Designer.cs">
       <DependentUpon>HeadDashboardForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Role.cs" />
-    <Compile Include="Semester.cs" />
-    <Compile Include="Course.cs" />
-    <Compile Include="FacultyService.cs" />
-    <Compile Include="FacultyDataAccess.cs" />
-    <Compile Include="Faculty.cs" />
-    <Compile Include="FacultyListForm.cs">
+    <Compile Include="LoggedInUser.cs" />
+    <Compile Include="Forms\RequestStatusForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FacultyListForm.Designer.cs">
+    <Compile Include="Forms\RequestStatusForm.Designer.cs">
+      <DependentUpon>RequestStatusForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Role.cs" />
+    <Compile Include="Models\Semester.cs" />
+    <Compile Include="Models\Course.cs" />
+    <Compile Include="Services\FacultyService.cs" />
+    <Compile Include="DataAccess\FacultyDataAccess.cs" />
+    <Compile Include="Models\Faculty.cs" />
+    <Compile Include="Forms\FacultyListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FacultyListForm.Designer.cs">
       <DependentUpon>FacultyListForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="RoleSelectionForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="RoleSelectionForm.Designer.cs">
-      <DependentUpon>RoleSelectionForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="SemesterDataAccess.cs" />
-    <Compile Include="SemesterService.cs" />
-    <Compile Include="User.cs" />
-    <Compile Include="UserDataAccess.cs" />
-    <Compile Include="UserService.cs" />
+    <Compile Include="DataAccess\SemesterDataAccess.cs" />
+    <Compile Include="Services\SemesterService.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="DataAccess\UserDataAccess.cs" />
+    <Compile Include="Services\UserService.cs" />
     <Compile Include="DatabaseHelper.cs" />
-    <Compile Include="ForgotPasswordForm.cs">
+    <Compile Include="Forms\ForgotPasswordForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ForgotPasswordForm.Designer.cs">
+    <Compile Include="Forms\ForgotPasswordForm.Designer.cs">
       <DependentUpon>ForgotPasswordForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="FacultyDashboardForm.cs">
+    <Compile Include="Forms\FacultyDashboardForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FacultyDashboardForm.Designer.cs">
+    <Compile Include="Forms\FacultyDashboardForm.Designer.cs">
       <DependentUpon>FacultyDashboardForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AssignWorkloadForm.cs">
+    <Compile Include="Forms\AssignWorkloadForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AssignWorkloadForm.Designer.cs">
+    <Compile Include="Forms\AssignWorkloadForm.Designer.cs">
       <DependentUpon>AssignWorkloadForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ResourceApprovalForm.cs">
+    <Compile Include="Forms\ResourceApprovalForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ResourceApprovalForm.Designer.cs">
+    <Compile Include="Forms\ResourceApprovalForm.Designer.cs">
       <DependentUpon>ResourceApprovalForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AllocateResourcesForm.cs">
+    <Compile Include="Forms\AllocateResourcesForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AllocateResourcesForm.Designer.cs">
+    <Compile Include="Forms\AllocateResourcesForm.Designer.cs">
       <DependentUpon>AllocateResourcesForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="FacultyProfileForm.cs">
+    <Compile Include="Forms\FacultyProfileForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FacultyProfileForm.Designer.cs">
+    <Compile Include="Forms\FacultyProfileForm.Designer.cs">
       <DependentUpon>FacultyProfileForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdminDashboardForm.cs">
+    <Compile Include="Forms\AdminDashboardForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminDashboardForm.Designer.cs">
+    <Compile Include="Forms\AdminDashboardForm.Designer.cs">
       <DependentUpon>AdminDashboardForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="RequestResourcesForm.cs">
+    <Compile Include="Forms\RequestResourcesForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RequestResourcesForm.Designer.cs">
+    <Compile Include="Forms\RequestResourcesForm.Designer.cs">
       <DependentUpon>RequestResourcesForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ConsumablesInventoryForm.cs">
+    <Compile Include="Forms\ConsumablesInventoryForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ConsumablesInventoryForm.Designer.cs">
+    <Compile Include="Forms\ConsumablesInventoryForm.Designer.cs">
       <DependentUpon>ConsumablesInventoryForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="GenerateReportsForm.cs">
+    <Compile Include="Forms\GenerateReportsForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GenerateReportsForm.Designer.cs">
+    <Compile Include="Forms\GenerateReportsForm.Designer.cs">
       <DependentUpon>GenerateReportsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\ResetPasswordForm.cs">
@@ -223,79 +241,85 @@
     <Compile Include="Properties\ResetPasswordForm.Designer.cs">
       <DependentUpon>ResetPasswordForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ManageFacultyForm.cs">
+    <Compile Include="Forms\ManageFacultyForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ManageFacultyForm.Designer.cs">
+    <Compile Include="Forms\ManageFacultyForm.Designer.cs">
       <DependentUpon>ManageFacultyForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="LoginForm.cs">
+    <Compile Include="Forms\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LoginForm.Designer.cs">
+    <Compile Include="Forms\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="SignupForm.cs">
+    <Compile Include="Forms\SignupForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SignupForm.Designer.cs">
+    <Compile Include="Forms\SignupForm.Designer.cs">
       <DependentUpon>SignupForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
-    <EmbeddedResource Include="AdminDashboardForm.resx">
+    <EmbeddedResource Include="Forms\AdminDashboardForm.resx">
       <DependentUpon>AdminDashboardForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AllocateResourcesForm.resx">
+    <EmbeddedResource Include="Forms\AllocateResourcesForm.resx">
       <DependentUpon>AllocateResourcesForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FacultyDashboardForm.resx">
+    <EmbeddedResource Include="Forms\AssignedCoursesForm.resx">
+      <DependentUpon>AssignedCoursesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FacultyDashboardForm.resx">
       <DependentUpon>FacultyDashboardForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HeadDashboardForm.resx">
+    <EmbeddedResource Include="Forms\FacultyRequestForm.resx">
+      <DependentUpon>FacultyRequestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\HeadDashboardForm.resx">
       <DependentUpon>HeadDashboardForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ResourceApprovalForm.resx">
+    <EmbeddedResource Include="Forms\RequestStatusForm.resx">
+      <DependentUpon>RequestStatusForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ResourceApprovalForm.resx">
       <DependentUpon>ResourceApprovalForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AssignWorkloadForm.resx">
+    <EmbeddedResource Include="Forms\AssignWorkloadForm.resx">
       <DependentUpon>AssignWorkloadForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CourseAssignmentForm.resx">
+    <EmbeddedResource Include="Forms\CourseAssignmentForm.resx">
       <DependentUpon>CourseAssignmentForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FacultyListForm.resx">
+    <EmbeddedResource Include="Forms\FacultyListForm.resx">
       <DependentUpon>FacultyListForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FacultyProfileForm.resx">
+    <EmbeddedResource Include="Forms\FacultyProfileForm.resx">
       <DependentUpon>FacultyProfileForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ForgotPasswordForm.resx">
+    <EmbeddedResource Include="Forms\ForgotPasswordForm.resx">
       <DependentUpon>ForgotPasswordForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GenerateReportsForm.resx">
+    <EmbeddedResource Include="Forms\GenerateReportsForm.resx">
       <DependentUpon>GenerateReportsForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ConsumablesInventoryForm.resx">
+    <EmbeddedResource Include="Forms\ConsumablesInventoryForm.resx">
       <DependentUpon>ConsumablesInventoryForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LoginForm.resx">
+    <EmbeddedResource Include="Forms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ManageFacultyForm.resx">
+    <EmbeddedResource Include="Forms\ManageFacultyForm.resx">
       <DependentUpon>ManageFacultyForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\ResetPasswordForm.resx">
       <DependentUpon>ResetPasswordForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RequestResourcesForm.resx">
+    <EmbeddedResource Include="Forms\RequestResourcesForm.resx">
       <DependentUpon>RequestResourcesForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RoleSelectionForm.resx">
-      <DependentUpon>RoleSelectionForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SignupForm.resx">
+    <EmbeddedResource Include="Forms\SignupForm.resx">
       <DependentUpon>SignupForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
