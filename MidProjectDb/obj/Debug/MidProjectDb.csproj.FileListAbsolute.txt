@@ -112,3 +112,8 @@ D:\2nd Semester\DB(MID_PROJECT)\MidProjectDb\obj\Debug\MidProjectDb.HeadDashboar
 D:\2nd Semester\DB(MID_PROJECT)\MidProjectDb\obj\Debug\MidProjectDb.AssignedCoursesForm.resources
 D:\2nd Semester\DB(MID_PROJECT)\MidProjectDb\obj\Debug\MidProjectDb.FacultyRequestForm.resources
 D:\2nd Semester\DB(MID_PROJECT)\MidProjectDb\obj\Debug\MidProjectDb.RequestStatusForm.resources
+D:\2nd Semester\DB(MID_PROJECT)\MidProjectDb\obj\Debug\MidProjectDb.AssignedProjectsForm.resources
+D:\2nd Semester\DB(MID_PROJECT)\MidProjectDb\obj\Debug\MidProjectDb.AllocateRoomsForm.resources
+D:\2nd Semester\DB(MID_PROJECT)\MidProjectDb\obj\Debug\MidProjectDb.AllocatedRoomsForm.resources
+D:\2nd Semester\DB(MID_PROJECT)\MidProjectDb\obj\Debug\MidProjectDb.ReportForm.resources
+D:\2nd Semester\DB(MID_PROJECT)\MidProjectDb\bin\Debug\RoomUtilizationReport.rdlc

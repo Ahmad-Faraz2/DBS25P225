@@ -16,5 +16,27 @@ namespace MidProjectDb
         {
             InitializeComponent();
         }
+
+        private void btnAssignWorkLoad_Click(object sender, EventArgs e)
+        {
+            AssignWorkloadForm workloadForm = new AssignWorkloadForm();
+            workloadForm.Show();
+            this.Hide();
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            LoggedInUser.SetUser(0, 0);
+            LoginForm login = new LoginForm();
+            login.Show();
+            this.Close();
+        }
+
+        private void btnAllocateRooms_Click(object sender, EventArgs e)
+        {
+            AllocateRoomsForm allocateroomsForm = new AllocateRoomsForm();
+            allocateroomsForm.Show();
+            this.Hide();
+        }
     }
 }

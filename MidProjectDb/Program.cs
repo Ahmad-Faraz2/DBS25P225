@@ -13,7 +13,6 @@ namespace MidProjectDb
         [STAThread]
         static void Main()
         {
-            // Now run the main form (e.g., LoginForm).
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(true);
             Application.Run(new LoginForm());

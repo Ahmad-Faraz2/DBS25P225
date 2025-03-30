@@ -41,5 +41,12 @@ namespace MidProjectDb
         {
             LoadAssignedCourses();
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            FacultyDashboardForm facultyDashboard = new FacultyDashboardForm();
+            facultyDashboard.Show();
+            this.Close();
+        }
     }
 }

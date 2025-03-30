@@ -37,7 +37,8 @@
             this.btnViewCourses = new System.Windows.Forms.Button();
             this.btnSubmitRequest = new System.Windows.Forms.Button();
             this.btnTrackRequests = new System.Windows.Forms.Button();
-            this.btnUpdateProfile = new System.Windows.Forms.Button();
+            this.btnViewProjects = new System.Windows.Forms.Button();
+            this.btnViewRooms = new System.Windows.Forms.Button();
             this.Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -95,7 +96,7 @@
             this.btnLogout.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnLogout.BackColor = System.Drawing.SystemColors.HotTrack;
             this.btnLogout.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnLogout.Location = new System.Drawing.Point(316, 281);
+            this.btnLogout.Location = new System.Drawing.Point(318, 343);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(75, 23);
             this.btnLogout.TabIndex = 62;
@@ -121,9 +122,9 @@
             this.btnSubmitRequest.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnSubmitRequest.BackColor = System.Drawing.SystemColors.HotTrack;
             this.btnSubmitRequest.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnSubmitRequest.Location = new System.Drawing.Point(306, 178);
+            this.btnSubmitRequest.Location = new System.Drawing.Point(306, 176);
             this.btnSubmitRequest.Name = "btnSubmitRequest";
-            this.btnSubmitRequest.Size = new System.Drawing.Size(98, 37);
+            this.btnSubmitRequest.Size = new System.Drawing.Size(98, 39);
             this.btnSubmitRequest.TabIndex = 64;
             this.btnSubmitRequest.Text = "Submit Resource Request";
             this.btnSubmitRequest.UseVisualStyleBackColor = false;
@@ -142,18 +143,31 @@
             this.btnTrackRequests.UseVisualStyleBackColor = false;
             this.btnTrackRequests.Click += new System.EventHandler(this.btnTrackRequests_Click);
             // 
-            // btnUpdateProfile
+            // btnViewProjects
             // 
-            this.btnUpdateProfile.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnUpdateProfile.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.btnUpdateProfile.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnUpdateProfile.Location = new System.Drawing.Point(306, 248);
-            this.btnUpdateProfile.Name = "btnUpdateProfile";
-            this.btnUpdateProfile.Size = new System.Drawing.Size(98, 27);
-            this.btnUpdateProfile.TabIndex = 66;
-            this.btnUpdateProfile.Text = "Update Profile";
-            this.btnUpdateProfile.UseVisualStyleBackColor = false;
-            this.btnUpdateProfile.Click += new System.EventHandler(this.btnUpdateProfile_Click);
+            this.btnViewProjects.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnViewProjects.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnViewProjects.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnViewProjects.Location = new System.Drawing.Point(306, 253);
+            this.btnViewProjects.Name = "btnViewProjects";
+            this.btnViewProjects.Size = new System.Drawing.Size(98, 39);
+            this.btnViewProjects.TabIndex = 66;
+            this.btnViewProjects.Text = "View Assigned Projects";
+            this.btnViewProjects.UseVisualStyleBackColor = false;
+            this.btnViewProjects.Click += new System.EventHandler(this.btnViewProjects_Click);
+            // 
+            // btnViewRooms
+            // 
+            this.btnViewRooms.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnViewRooms.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnViewRooms.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnViewRooms.Location = new System.Drawing.Point(306, 298);
+            this.btnViewRooms.Name = "btnViewRooms";
+            this.btnViewRooms.Size = new System.Drawing.Size(98, 39);
+            this.btnViewRooms.TabIndex = 67;
+            this.btnViewRooms.Text = "View Allocated Rooms";
+            this.btnViewRooms.UseVisualStyleBackColor = false;
+            this.btnViewRooms.Click += new System.EventHandler(this.btnViewRooms_Click);
             // 
             // FacultyDashboardForm
             // 
@@ -161,7 +175,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnUpdateProfile);
+            this.Controls.Add(this.btnViewRooms);
+            this.Controls.Add(this.btnViewProjects);
             this.Controls.Add(this.btnTrackRequests);
             this.Controls.Add(this.btnSubmitRequest);
             this.Controls.Add(this.btnViewCourses);
@@ -188,6 +203,7 @@
         private System.Windows.Forms.Button btnViewCourses;
         private System.Windows.Forms.Button btnSubmitRequest;
         private System.Windows.Forms.Button btnTrackRequests;
-        private System.Windows.Forms.Button btnUpdateProfile;
+        private System.Windows.Forms.Button btnViewProjects;
+        private System.Windows.Forms.Button btnViewRooms;
     }
 }

@@ -10,7 +10,6 @@ namespace MidProjectDb
     public class FacultyRequestDataAccess
     {
         private DatabaseHelper dbHelper = new DatabaseHelper();
-
         public bool InsertRequest(FacultyRequest request)
         {
             bool result = false;
@@ -32,7 +31,7 @@ namespace MidProjectDb
             return result;
         }
 
-        public List<FacultyRequest> GetRequestsByFaculty(int facultyId)
+        public List<FacultyRequest> GetRequestsForFaculty(int facultyId)
         {
             List<FacultyRequest> requests = new List<FacultyRequest>();
             using (MySqlConnection conn = dbHelper.GetConnection())
@@ -43,6 +42,51 @@ namespace MidProjectDb
                 using (MySqlCommand cmd = new MySqlCommand(query, conn))
                 {
                     cmd.Parameters.AddWithValue("@faculty_id", facultyId);
+                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            FacultyRequest req = new FacultyRequest
+                            {
+                                RequestId = reader.GetInt32("request_id"),
+                                FacultyId = reader.GetInt32("faculty_id"),
+                                ItemId = reader.GetInt32("item_id"),
+                                Quantity = reader.GetInt32("quantity"),
+                                StatusId = reader.GetInt32("status_id"),
+                                RequestDate = reader.GetDateTime("request_date")
+                            };
+                            requests.Add(req);
+                        }
+                    }
+                }
+            }
+            return requests;
+        }
+        public bool UpdateRequestStatus(int requestId, int newStatusId)
+        {
+            bool result = false;
+            using (MySqlConnection conn = dbHelper.GetConnection())
+            {
+                conn.Open();
+                string query = "UPDATE faculty_requests SET status_id = @status_id WHERE request_id = @request_id";
+                using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@status_id", newStatusId);
+                    cmd.Parameters.AddWithValue("@request_id", requestId);
+                    result = cmd.ExecuteNonQuery() > 0;
+                }
+            }
+            return result;
+        }
+        public List<FacultyRequest> GetAllRequests()
+        {
+            List<FacultyRequest> requests = new List<FacultyRequest>();
+            using (MySqlConnection conn = dbHelper.GetConnection())
+            {
+                conn.Open();
+                string query = "SELECT request_id, faculty_id, item_id, quantity, status_id, request_date FROM faculty_requests";
+                using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                {
                     using (MySqlDataReader reader = cmd.ExecuteReader())
                     {
                         while (reader.Read())

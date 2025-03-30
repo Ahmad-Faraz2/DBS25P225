@@ -11,6 +11,8 @@ namespace MidProjectDb
         public int FacultyCourseId { get; set; }
         public int FacultyId { get; set; }
         public int CourseId { get; set; }
+        public string CourseName { get; set; }
         public int SemesterId { get; set; }
+        public string DisplayTerm { get; set; }
     }
 }

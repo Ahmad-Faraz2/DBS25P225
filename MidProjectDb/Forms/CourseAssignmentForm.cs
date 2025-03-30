@@ -19,15 +19,9 @@ namespace MidProjectDb
         public CourseAssignmentForm()
         {
             InitializeComponent();
-            LoadFacultyDropdown();
-            LoadCourseDropdown();
-            LoadSemesterDropdown();
-            LoadAssignments();
         }
         private void LoadFacultyDropdown()
         {
-            // Replace with actual retrieval from your database.
-            FacultyService facultyService = new FacultyService();
             List<Faculty> faculties = facultyService.GetAllFaculty();
             cmbFaculty.DataSource = faculties;
             cmbFaculty.DisplayMember = "Name";
@@ -49,7 +43,6 @@ namespace MidProjectDb
         {
             List<Semester> semesters = semesterService.GetAllSemesters();
             cmbSemester.DataSource = semesters;
-            // Assuming Semester has a helper property for display, such as "DisplayTerm"
             cmbSemester.DisplayMember = "DisplayTerm";
             cmbSemester.ValueMember = "SemesterId";
         }
@@ -75,63 +68,93 @@ namespace MidProjectDb
 
         private void btnAssign_Click(object sender, EventArgs e)
         {
-            int facultyId = (int)cmbFaculty.SelectedValue;
-            int courseId = (int)cmbCourse.SelectedValue;
-            int semesterId = (int)cmbSemester.SelectedValue;
-
             FacultyCourseAssignment assignment = new FacultyCourseAssignment
             {
-                FacultyId = facultyId,
-                CourseId = courseId,
-                SemesterId = semesterId
+                FacultyId = (int)cmbFaculty.SelectedValue,
+                CourseId = (int)cmbCourse.SelectedValue,
+                SemesterId = (int)cmbSemester.SelectedValue
             };
 
             bool result = assignmentService.AssignCourse(assignment);
             if (result)
             {
-                MessageBox.Show("Course assigned successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Course assigned successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                ClearFields();
                 LoadAssignments();
             }
             else
             {
-                MessageBox.Show("Error assigning course.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Failed to assign course.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            if (dgvAssignments.CurrentRow != null)
+            if (dgvAssignments.CurrentRow == null)
             {
-                FacultyCourseAssignment selectedAssignment = dgvAssignments.CurrentRow.DataBoundItem as FacultyCourseAssignment;
-                if (selectedAssignment != null)
-                {
-                    selectedAssignment.FacultyId = (int)cmbFaculty.SelectedValue;
-                    selectedAssignment.CourseId = (int)cmbCourse.SelectedValue;
-                    selectedAssignment.SemesterId = (int)cmbSemester.SelectedValue;
+                MessageBox.Show("Please select an assignment to update.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
-                    bool result = assignmentService.UpdateAssignment(selectedAssignment);
-                    if (result)
-                    {
-                        MessageBox.Show("Assignment updated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        LoadAssignments();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Error updating assignment.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                }
+            FacultyCourseAssignment selectedAssignment = dgvAssignments.CurrentRow.DataBoundItem as FacultyCourseAssignment;
+            if (selectedAssignment == null)
+            {
+                MessageBox.Show("Assignment selection error.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            FacultyCourseAssignment updatedAssignment = new FacultyCourseAssignment
+            {
+                FacultyCourseId = selectedAssignment.FacultyCourseId,
+                FacultyId = (int)cmbFaculty.SelectedValue,
+                CourseId = (int)cmbCourse.SelectedValue,
+                SemesterId = (int)cmbSemester.SelectedValue
+            };
+
+            bool result = assignmentService.UpdateAssignment(updatedAssignment);
+            if (result)
+            {
+                MessageBox.Show("Assignment updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LoadAssignments();
             }
             else
             {
-                MessageBox.Show("Please select an assignment to update.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Failed to update assignment.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-            cmbFaculty.SelectedIndex = 0;
-            cmbCourse.SelectedIndex = 0;
-            cmbSemester.SelectedIndex = 0;
+            ClearFields();
+        }
+        private void ClearFields()
+        {
+            if (cmbFaculty.Items.Count > 0)
+            {
+                cmbFaculty.SelectedIndex = 0;
+            }
+            if (cmbCourse.Items.Count > 0)
+            {
+                cmbCourse.SelectedIndex = 0;
+            }
+            if (cmbSemester.Items.Count > 0)
+            {
+                cmbSemester.SelectedIndex = 0;
+            }
+        }
+        private void CourseAssignmentForm_Load(object sender, EventArgs e)
+        {
+            LoadFacultyDropdown();
+            LoadCourseDropdown();
+            LoadSemesterDropdown();
+            LoadAssignments();
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            AdminDashboardForm adminDashboard = new AdminDashboardForm();
+            adminDashboard.Show();
+            this.Close();
         }
     }
 }

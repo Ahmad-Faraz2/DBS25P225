@@ -34,7 +34,9 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.dgvRequests = new System.Windows.Forms.DataGridView();
+            this.btnBack = new System.Windows.Forms.Button();
             this.btnReject = new System.Windows.Forms.Button();
+            this.btnFulfill = new System.Windows.Forms.Button();
             this.Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRequests)).BeginInit();
@@ -42,9 +44,10 @@
             // 
             // btnApprove
             // 
+            this.btnApprove.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnApprove.BackColor = System.Drawing.SystemColors.HotTrack;
             this.btnApprove.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnApprove.Location = new System.Drawing.Point(329, 297);
+            this.btnApprove.Location = new System.Drawing.Point(329, 284);
             this.btnApprove.Name = "btnApprove";
             this.btnApprove.Size = new System.Drawing.Size(75, 23);
             this.btnApprove.TabIndex = 67;
@@ -81,7 +84,7 @@
             this.label3.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.Control;
-            this.label3.Location = new System.Drawing.Point(340, 22);
+            this.label3.Location = new System.Drawing.Point(283, 24);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(205, 25);
             this.label3.TabIndex = 0;
@@ -96,28 +99,58 @@
             this.dgvRequests.TabIndex = 68;
             this.dgvRequests.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRequests_CellContentClick);
             // 
+            // btnBack
+            // 
+            this.btnBack.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnBack.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnBack.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnBack.Location = new System.Drawing.Point(329, 387);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(75, 23);
+            this.btnBack.TabIndex = 69;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
             // btnReject
             // 
+            this.btnReject.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnReject.BackColor = System.Drawing.SystemColors.HotTrack;
             this.btnReject.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnReject.Location = new System.Drawing.Point(329, 326);
+            this.btnReject.Location = new System.Drawing.Point(329, 313);
             this.btnReject.Name = "btnReject";
             this.btnReject.Size = new System.Drawing.Size(75, 23);
-            this.btnReject.TabIndex = 69;
+            this.btnReject.TabIndex = 70;
             this.btnReject.Text = "Reject";
             this.btnReject.UseVisualStyleBackColor = false;
+            this.btnReject.Click += new System.EventHandler(this.btnReject_Click);
             // 
-            // ApproveRequestsForm
+            // btnFulfill
+            // 
+            this.btnFulfill.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnFulfill.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnFulfill.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnFulfill.Location = new System.Drawing.Point(329, 342);
+            this.btnFulfill.Name = "btnFulfill";
+            this.btnFulfill.Size = new System.Drawing.Size(75, 39);
+            this.btnFulfill.TabIndex = 71;
+            this.btnFulfill.Text = "Mark as Fulfilled";
+            this.btnFulfill.UseVisualStyleBackColor = false;
+            this.btnFulfill.Click += new System.EventHandler(this.btnFulfill_Click);
+            // 
+            // ResourceApprovalForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnFulfill);
             this.Controls.Add(this.btnReject);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.dgvRequests);
             this.Controls.Add(this.btnApprove);
             this.Controls.Add(this.Panel1);
-            this.Name = "ApproveRequestsForm";
+            this.Name = "ResourceApprovalForm";
             this.Text = "ApproveRequests";
             this.Load += new System.EventHandler(this.ApproveRequestsForm_Load);
             this.Panel1.ResumeLayout(false);
@@ -135,6 +168,8 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dgvRequests;
+        private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button btnReject;
+        private System.Windows.Forms.Button btnFulfill;
     }
 }

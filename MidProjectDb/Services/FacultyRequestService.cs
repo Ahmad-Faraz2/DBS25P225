@@ -8,16 +8,24 @@ namespace MidProjectDb
 {
     public class FacultyRequestService
     {
-        private FacultyRequestDataAccess requestDataAccess = new FacultyRequestDataAccess();
+        private FacultyRequestDataAccess dataAccess = new FacultyRequestDataAccess();
 
         public bool SubmitRequest(FacultyRequest request)
         {
-            return requestDataAccess.InsertRequest(request);
+            return dataAccess.InsertRequest(request);
         }
 
         public List<FacultyRequest> GetRequestsForFaculty(int facultyId)
         {
-            return requestDataAccess.GetRequestsByFaculty(facultyId);
+            return dataAccess.GetRequestsForFaculty(facultyId);
+        }
+        public bool UpdateRequestStatus(int requestId, int newStatusId)
+        {
+            return dataAccess.UpdateRequestStatus(requestId, newStatusId);
+        }
+        public List<FacultyRequest> GetAllRequests()
+        {
+            return dataAccess.GetAllRequests();
         }
     }
 }

@@ -32,12 +32,18 @@
             this.Panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.dgvInventory = new System.Windows.Forms.DataGridView();
-            this.txtQuantity = new System.Windows.Forms.TextBox();
-            this.btnUpdate = new System.Windows.Forms.Button();
+            this.dgvConsumables = new System.Windows.Forms.DataGridView();
+            this.txtItemName = new System.Windows.Forms.TextBox();
+            this.btnAddNewItem = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
+            this.btnDeleteItem = new System.Windows.Forms.Button();
+            this.btnUpdateQuantity = new System.Windows.Forms.Button();
+            this.txtConsumableId = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvInventory)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvConsumables)).BeginInit();
             this.SuspendLayout();
             // 
             // Panel1
@@ -75,51 +81,125 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Inventory Management";
             // 
-            // dgvInventory
+            // dgvConsumables
             // 
-            this.dgvInventory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvInventory.Location = new System.Drawing.Point(291, 95);
-            this.dgvInventory.Name = "dgvInventory";
-            this.dgvInventory.Size = new System.Drawing.Size(240, 150);
-            this.dgvInventory.TabIndex = 71;
+            this.dgvConsumables.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvConsumables.Location = new System.Drawing.Point(292, 80);
+            this.dgvConsumables.Name = "dgvConsumables";
+            this.dgvConsumables.Size = new System.Drawing.Size(240, 150);
+            this.dgvConsumables.TabIndex = 71;
+            this.dgvConsumables.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvConsumables_CellClick);
             // 
-            // txtQuantity
+            // txtItemName
             // 
-            this.txtQuantity.Location = new System.Drawing.Point(367, 268);
-            this.txtQuantity.Name = "txtQuantity";
-            this.txtQuantity.Size = new System.Drawing.Size(100, 20);
-            this.txtQuantity.TabIndex = 72;
-            this.txtQuantity.Text = "Quantity";
+            this.txtItemName.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtItemName.Location = new System.Drawing.Point(273, 268);
+            this.txtItemName.Name = "txtItemName";
+            this.txtItemName.Size = new System.Drawing.Size(100, 20);
+            this.txtItemName.TabIndex = 72;
             // 
-            // btnUpdate
+            // btnAddNewItem
             // 
-            this.btnUpdate.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.btnUpdate.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnUpdate.Location = new System.Drawing.Point(367, 303);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(75, 23);
-            this.btnUpdate.TabIndex = 73;
-            this.btnUpdate.Text = "Update";
-            this.btnUpdate.UseVisualStyleBackColor = false;
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            this.btnAddNewItem.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnAddNewItem.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnAddNewItem.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnAddNewItem.Location = new System.Drawing.Point(371, 303);
+            this.btnAddNewItem.Name = "btnAddNewItem";
+            this.btnAddNewItem.Size = new System.Drawing.Size(86, 23);
+            this.btnAddNewItem.TabIndex = 73;
+            this.btnAddNewItem.Text = "Add New Item";
+            this.btnAddNewItem.UseVisualStyleBackColor = false;
+            this.btnAddNewItem.Click += new System.EventHandler(this.btnAddNewItem_Click);
             // 
-            // InventoryManagementForm
+            // btnBack
+            // 
+            this.btnBack.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnBack.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnBack.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnBack.Location = new System.Drawing.Point(371, 390);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(86, 23);
+            this.btnBack.TabIndex = 74;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
+            // btnDeleteItem
+            // 
+            this.btnDeleteItem.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnDeleteItem.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnDeleteItem.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnDeleteItem.Location = new System.Drawing.Point(371, 361);
+            this.btnDeleteItem.Name = "btnDeleteItem";
+            this.btnDeleteItem.Size = new System.Drawing.Size(86, 23);
+            this.btnDeleteItem.TabIndex = 75;
+            this.btnDeleteItem.Text = "Delete Item";
+            this.btnDeleteItem.UseVisualStyleBackColor = false;
+            this.btnDeleteItem.Click += new System.EventHandler(this.btnDeleteItem_Click);
+            // 
+            // btnUpdateQuantity
+            // 
+            this.btnUpdateQuantity.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnUpdateQuantity.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnUpdateQuantity.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnUpdateQuantity.Location = new System.Drawing.Point(371, 332);
+            this.btnUpdateQuantity.Name = "btnUpdateQuantity";
+            this.btnUpdateQuantity.Size = new System.Drawing.Size(98, 23);
+            this.btnUpdateQuantity.TabIndex = 76;
+            this.btnUpdateQuantity.Text = "Update Quantity";
+            this.btnUpdateQuantity.UseVisualStyleBackColor = false;
+            this.btnUpdateQuantity.Click += new System.EventHandler(this.btnUpdateQuantity_Click);
+            // 
+            // txtConsumableId
+            // 
+            this.txtConsumableId.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtConsumableId.Location = new System.Drawing.Point(447, 268);
+            this.txtConsumableId.Name = "txtConsumableId";
+            this.txtConsumableId.ReadOnly = true;
+            this.txtConsumableId.Size = new System.Drawing.Size(100, 20);
+            this.txtConsumableId.TabIndex = 77;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(273, 249);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(58, 13);
+            this.label1.TabIndex = 78;
+            this.label1.Text = "Item Name";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(444, 252);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(74, 13);
+            this.label2.TabIndex = 79;
+            this.label2.Text = "ConsumableId";
+            // 
+            // ConsumablesInventoryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnUpdate);
-            this.Controls.Add(this.txtQuantity);
-            this.Controls.Add(this.dgvInventory);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtConsumableId);
+            this.Controls.Add(this.btnUpdateQuantity);
+            this.Controls.Add(this.btnDeleteItem);
+            this.Controls.Add(this.btnBack);
+            this.Controls.Add(this.btnAddNewItem);
+            this.Controls.Add(this.txtItemName);
+            this.Controls.Add(this.dgvConsumables);
             this.Controls.Add(this.Panel1);
-            this.Name = "InventoryManagementForm";
+            this.Name = "ConsumablesInventoryForm";
             this.Text = "InventoryManagement";
             this.Load += new System.EventHandler(this.InventoryManagementForm_Load);
             this.Panel1.ResumeLayout(false);
             this.Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvInventory)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvConsumables)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -130,8 +210,14 @@
         private System.Windows.Forms.Panel Panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DataGridView dgvInventory;
-        private System.Windows.Forms.TextBox txtQuantity;
-        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.DataGridView dgvConsumables;
+        private System.Windows.Forms.TextBox txtItemName;
+        private System.Windows.Forms.Button btnAddNewItem;
+        private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Button btnDeleteItem;
+        private System.Windows.Forms.Button btnUpdateQuantity;
+        private System.Windows.Forms.TextBox txtConsumableId;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }

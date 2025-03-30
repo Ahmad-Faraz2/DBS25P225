@@ -116,6 +116,34 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\AllocatedRoomsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AllocatedRoomsForm.Designer.cs">
+      <DependentUpon>AllocatedRoomsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AllocateRoomsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AllocateRoomsForm.Designer.cs">
+      <DependentUpon>AllocateRoomsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\FacultyRoomAllocationDataAccess.cs" />
+    <Compile Include="Services\FacultyRoomAllocationService.cs" />
+    <Compile Include="Models\FacultyRoomAllocation.cs" />
+    <Compile Include="Forms\AssignedProjectsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AssignedProjectsForm.Designer.cs">
+      <DependentUpon>AssignedProjectsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\ConsumableDataAccess.cs" />
+    <Compile Include="Models\Room.cs" />
+    <Compile Include="DataAccess\RoomDataAccess.cs" />
+    <Compile Include="Services\RoomService.cs" />
+    <Compile Include="Services\FacultyProjectService.cs" />
+    <Compile Include="Models\FacultyProject.cs" />
+    <Compile Include="DataAccess\FacultyProjectDataAccess.cs" />
     <Compile Include="Forms\AssignedCoursesForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +151,9 @@
       <DependentUpon>AssignedCoursesForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Consumable.cs" />
+    <Compile Include="Models\Project.cs" />
+    <Compile Include="DataAccess\ProjectDataAccess.cs" />
+    <Compile Include="Services\ProjectService.cs" />
     <Compile Include="Services\ConsumableService.cs" />
     <Compile Include="Services\CourseService.cs" />
     <Compile Include="DataAccess\CourseDataAccess.cs" />
@@ -262,6 +293,15 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="Forms\AllocatedRoomsForm.resx">
+      <DependentUpon>AllocatedRoomsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AllocateRoomsForm.resx">
+      <DependentUpon>AllocateRoomsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AssignedProjectsForm.resx">
+      <DependentUpon>AssignedProjectsForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\AdminDashboardForm.resx">
       <DependentUpon>AdminDashboardForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -333,6 +373,10 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\CourseOfferingsData.datasource" />
+    <None Include="Properties\DataSources\FacultyCourseAssignmentReportData.datasource" />
+    <None Include="Properties\DataSources\FacultyOverviewData.datasource" />
+    <None Include="Properties\DataSources\RoomUtilizationData.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

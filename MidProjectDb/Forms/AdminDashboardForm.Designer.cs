@@ -37,6 +37,7 @@
             this.btnAllocateCourses = new System.Windows.Forms.Button();
             this.btnUpdateInventory = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
+            this.btnGenerateReport = new System.Windows.Forms.Button();
             this.Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -138,7 +139,7 @@
             this.btnLogout.BackColor = System.Drawing.SystemColors.HotTrack;
             this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnLogout.Location = new System.Drawing.Point(274, 335);
+            this.btnLogout.Location = new System.Drawing.Point(274, 354);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(122, 30);
             this.btnLogout.TabIndex = 58;
@@ -146,12 +147,27 @@
             this.btnLogout.UseVisualStyleBackColor = false;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
+            // btnGenerateReport
+            // 
+            this.btnGenerateReport.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnGenerateReport.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnGenerateReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGenerateReport.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnGenerateReport.Location = new System.Drawing.Point(274, 318);
+            this.btnGenerateReport.Name = "btnGenerateReport";
+            this.btnGenerateReport.Size = new System.Drawing.Size(122, 30);
+            this.btnGenerateReport.TabIndex = 59;
+            this.btnGenerateReport.Text = "Generate Report";
+            this.btnGenerateReport.UseVisualStyleBackColor = false;
+            this.btnGenerateReport.Click += new System.EventHandler(this.btnGenerateReport_Click);
+            // 
             // AdminDashboardForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnGenerateReport);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.btnUpdateInventory);
             this.Controls.Add(this.btnAllocateCourses);
@@ -177,5 +193,6 @@
         private System.Windows.Forms.Button btnAllocateCourses;
         private System.Windows.Forms.Button btnUpdateInventory;
         private System.Windows.Forms.Button btnLogout;
+        private System.Windows.Forms.Button btnGenerateReport;
     }
 }

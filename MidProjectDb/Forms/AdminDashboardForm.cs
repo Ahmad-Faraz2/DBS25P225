@@ -57,5 +57,12 @@ namespace MidProjectDb
             login.Show();
             this.Close();
         }
+
+        private void btnGenerateReport_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ReportForm reportForm = new ReportForm();
+            reportForm.Show();
+        }
     }
 }

@@ -35,29 +35,40 @@ namespace MidProjectDb
         {
             AssignedCoursesForm assignedCoursesForm = new AssignedCoursesForm();
             assignedCoursesForm.Show();
+            this.Close();
         }
 
         private void btnSubmitRequest_Click(object sender, EventArgs e)
         {
             FacultyRequestForm requestForm = new FacultyRequestForm();
             requestForm.Show();
+            this.Close();
         }
 
         private void btnTrackRequests_Click(object sender, EventArgs e)
         {
             RequestStatusForm statusForm = new RequestStatusForm();
             statusForm.Show();
-        }
-
-        private void btnUpdateProfile_Click(object sender, EventArgs e)
-        {
-            FacultyProfileForm profileForm = new FacultyProfileForm();
-            profileForm.Show();
+            this.Close();   
         }
 
         private void FacultyDashboardForm_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnViewProjects_Click(object sender, EventArgs e)
+        {
+            AssignedProjectsForm projectForm = new AssignedProjectsForm();
+            projectForm.Show();
+            this.Close();
+        }
+
+        private void btnViewRooms_Click(object sender, EventArgs e)
+        {
+            AllocatedRoomsForm roomsForm = new AllocatedRoomsForm();
+            roomsForm.Show();
+            this.Close();
         }
     }
 }

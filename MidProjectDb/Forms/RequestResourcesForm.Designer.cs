@@ -29,36 +29,41 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RequestResourcesForm));
-            this.btnSubmitRequest = new System.Windows.Forms.Button();
-            this.cmbResourceType = new System.Windows.Forms.ComboBox();
+            this.btnSubmit = new System.Windows.Forms.Button();
+            this.cmbConsumables = new System.Windows.Forms.ComboBox();
             this.Panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtQuantity = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnClear = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
             this.Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnSubmitRequest
+            // btnSubmit
             // 
-            this.btnSubmitRequest.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.btnSubmitRequest.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnSubmitRequest.Location = new System.Drawing.Point(299, 248);
-            this.btnSubmitRequest.Name = "btnSubmitRequest";
-            this.btnSubmitRequest.Size = new System.Drawing.Size(75, 23);
-            this.btnSubmitRequest.TabIndex = 67;
-            this.btnSubmitRequest.Text = "Submit";
-            this.btnSubmitRequest.UseVisualStyleBackColor = false;
-            this.btnSubmitRequest.Click += new System.EventHandler(this.btnSubmitRequest_Click);
+            this.btnSubmit.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnSubmit.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnSubmit.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnSubmit.Location = new System.Drawing.Point(299, 248);
+            this.btnSubmit.Name = "btnSubmit";
+            this.btnSubmit.Size = new System.Drawing.Size(100, 27);
+            this.btnSubmit.TabIndex = 67;
+            this.btnSubmit.Text = "Submit Request";
+            this.btnSubmit.UseVisualStyleBackColor = false;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmitRequest_Click);
             // 
-            // cmbResourceType
+            // cmbConsumables
             // 
-            this.cmbResourceType.FormattingEnabled = true;
-            this.cmbResourceType.Location = new System.Drawing.Point(278, 157);
-            this.cmbResourceType.Name = "cmbResourceType";
-            this.cmbResourceType.Size = new System.Drawing.Size(121, 21);
-            this.cmbResourceType.TabIndex = 64;
-            this.cmbResourceType.Text = "Resources";
+            this.cmbConsumables.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cmbConsumables.FormattingEnabled = true;
+            this.cmbConsumables.Location = new System.Drawing.Point(278, 157);
+            this.cmbConsumables.Name = "cmbConsumables";
+            this.cmbConsumables.Size = new System.Drawing.Size(121, 21);
+            this.cmbConsumables.TabIndex = 64;
             // 
             // Panel1
             // 
@@ -97,11 +102,56 @@
             // 
             // txtQuantity
             // 
+            this.txtQuantity.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtQuantity.Location = new System.Drawing.Point(278, 198);
             this.txtQuantity.Name = "txtQuantity";
             this.txtQuantity.Size = new System.Drawing.Size(100, 20);
             this.txtQuantity.TabIndex = 68;
-            this.txtQuantity.Text = "Quantity";
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(278, 138);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(58, 13);
+            this.label1.TabIndex = 69;
+            this.label1.Text = "Resources";
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(278, 182);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(46, 13);
+            this.label2.TabIndex = 70;
+            this.label2.Text = "Quantity";
+            // 
+            // btnClear
+            // 
+            this.btnClear.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnClear.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnClear.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnClear.Location = new System.Drawing.Point(299, 281);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(100, 27);
+            this.btnClear.TabIndex = 71;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
+            // btnBack
+            // 
+            this.btnBack.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnBack.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnBack.Location = new System.Drawing.Point(299, 314);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(100, 27);
+            this.btnBack.TabIndex = 72;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // RequestResourcesForm
             // 
@@ -109,12 +159,17 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnBack);
+            this.Controls.Add(this.btnClear);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.txtQuantity);
-            this.Controls.Add(this.btnSubmitRequest);
-            this.Controls.Add(this.cmbResourceType);
+            this.Controls.Add(this.btnSubmit);
+            this.Controls.Add(this.cmbConsumables);
             this.Controls.Add(this.Panel1);
             this.Name = "RequestResourcesForm";
             this.Text = "RequestResource";
+            this.Load += new System.EventHandler(this.RequestResourcesForm_Load);
             this.Panel1.ResumeLayout(false);
             this.Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -125,11 +180,15 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnSubmitRequest;
-        private System.Windows.Forms.ComboBox cmbResourceType;
+        private System.Windows.Forms.Button btnSubmit;
+        private System.Windows.Forms.ComboBox cmbConsumables;
         private System.Windows.Forms.Panel Panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtQuantity;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.Button btnBack;
     }
 }

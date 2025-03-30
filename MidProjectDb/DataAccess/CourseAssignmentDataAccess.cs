@@ -56,7 +56,13 @@ namespace MidProjectDb
             using (MySqlConnection conn = dbHelper.GetConnection())
             {
                 conn.Open();
-                string query = "SELECT faculty_course_id, faculty_id, course_id, semester_id FROM faculty_courses";
+                string query = @"
+            SELECT fc.faculty_course_id, fc.faculty_id, fc.course_id, fc.semester_id,
+                   c.course_name,
+                   CONCAT(s.term, ' ', s.year) AS DisplayTerm
+            FROM faculty_courses fc
+            JOIN courses c ON fc.course_id = c.course_id
+            JOIN semesters s ON fc.semester_id = s.semester_id";
                 using (MySqlCommand cmd = new MySqlCommand(query, conn))
                 {
                     using (MySqlDataReader reader = cmd.ExecuteReader())
@@ -68,7 +74,9 @@ namespace MidProjectDb
                                 FacultyCourseId = reader.GetInt32("faculty_course_id"),
                                 FacultyId = reader.GetInt32("faculty_id"),
                                 CourseId = reader.GetInt32("course_id"),
-                                SemesterId = reader.GetInt32("semester_id")
+                                SemesterId = reader.GetInt32("semester_id"),
+                                CourseName = reader.GetString("course_name"),
+                                DisplayTerm = reader.GetString("DisplayTerm")
                             };
                             assignments.Add(assignment);
                         }
